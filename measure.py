@@ -13,11 +13,10 @@ import dns.resolver
 import socket
 import csv
 from tqdm import tqdm
-import socks
 socket.setdefaulttimeout(3)
 # socks.set_default_proxy(socks.SOCKS5, "localhost", 7890)
 # socket.socket = socks.socksocket
-csvpath = "./alexa-top-1m/csv/1000.csv"
+csvpath = "../alexa-top-1m/csv/1000.csv"
 with open(csvpath) as f:
     mill = f.readlines()
 mill = [dd.split('\n')[0].split(',')[1] for dd in mill] 
@@ -37,7 +36,7 @@ def tfunc(kk):
     with open(csv_filename, mode='w', newline='') as file:
         writer = csv.writer(file)
         # for dom in mill[kk*1:(kk+1)*1]:
-        for j in tqdm(range(kk * 1,(kk+1) * 1)):
+        for j in tqdm(range(kk * 1000,(kk+1) * 1000)):
             dom = mill[j]
             tls_ver, cert_info = check_tls(dom)
             data = []
@@ -64,7 +63,7 @@ def tfunc(kk):
             insertrow.append(data)
         writer.writerows(insertrow)
 threads = []
-for i in range(10):
+for i in range(1):
     thread = threading.Thread(target=tfunc, args=(i,))
     threads.append(thread)
     thread.start()
