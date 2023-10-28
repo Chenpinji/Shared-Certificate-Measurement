@@ -45,7 +45,7 @@ d100_1000 = 0
 d1000_10000 = 0
 d10000_1000000 = 0
 out1M = 0
-file_path = 'rank_dependency_new.json'
+file_path = 'rank_dependency_new2.json'
 with open(file_path, 'w') as wfile:
     with open('relate_dom_Alexa1K.json', 'r') as file:
         for line in tqdm(file):
@@ -59,6 +59,9 @@ with open(file_path, 'w') as wfile:
             data['rank'] = rank
             out1w = []
             out1m = []
+            in100 = []
+            in1000 = []
+            in1w = []
             validcnt = 0
             print(domain, end = ' ')
             print(rank)
@@ -73,11 +76,14 @@ with open(file_path, 'w') as wfile:
                 if domain in cert or d1 in cert or d2 in cert:
                     if relate_domain in domain2rank:
                         if domain2rank[relate_domain] <= 100:
-                            d1_100 += 1                
+                            d1_100 += 1    
+                            in100.append(relate_domain)            
                         elif domain2rank[relate_domain] <=1000:
                             d100_1000+=1
+                            in1000.append(relate_domain)
                         elif domain2rank[relate_domain] <=10000:
                             d1000_10000 += 1
+                            in1w.append(relate_domain)
                         else:
                             d10000_1000000 += 1
                             out1w.append(relate_domain)
@@ -85,6 +91,9 @@ with open(file_path, 'w') as wfile:
                         out1m.append(relate_domain)
                         out1M += 1
             data['valid domain cnt'] = validcnt
+            data['rely on top 100'] = in100
+            data['rely on top 1000'] = in1000
+            data['rely on top 1w'] = in1w
             data['rely on out 1w'] = out1w
             data['out1w cnt'] = len(out1w)
             data['rely on out 1m'] = out1m
