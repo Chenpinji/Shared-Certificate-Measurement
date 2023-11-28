@@ -23,3 +23,7 @@ please go to Tranco_secure_dep to check our codes and measurement results.
 * ***rank_dependency_Apex.json*** gives the result of Which websites Tranco's Top 1K websites share certificates with. We use Tranco Top 1M(without subdomains) to rank these domains. 
 * ***rank_dependency_Withsub.json*** since Tranco Top 1M(without subdomains) doesn't give rank to the subdomains. Thus, We use tranco Top 1M(with subdomains) to rank them and demonstrate the rank dependency phenomenon.   
 * In our results, domain A depends on domain B means A is in the SAN list of B's TLS certificate. In this case, B can use server push to attack A. 
+
+## Requirements
+* Python 3.6
+* Chinese developers need to bypass GFW
