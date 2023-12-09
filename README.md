@@ -1,8 +1,8 @@
 # Shared Certificate Measurement
-This repo aims to conduct a large-scale shared certificate measurement on Tranco Top 1K(We also conducted measurement on Alexa Top 1K, though Alexa stopped updating their rank). We managed to find which websites are sharing TLS/SSL certificates with Tranco's Top 1K websites. By analyzing the rank of these "related websites", we reveal the rank dependency phenomenon of today's certificate ecosystem. 
+This repo aims to conduct a large-scale shared certificate measurement on Tranco Top 1K (We also conducted measurement on Alexa Top 1K, though Alexa stopped updating its rank). We elaborate on finding which websites are sharing TLS/SSL certificates with Tranco's Top 1K websites. By analyzing the rank of these "related websites", we reveal the rank dependency phenomenon of today's certificate ecosystem. 
 
 ## Summay
-* ***Alexa*** contains the code, dataset, and result of measurement on the latest Alexa Top 1K. We are not going to maintain it as Alexa's rank is disappearing.
+* ***Alexa*** contains the code, dataset, and result of measurement on the latest Alexa Top 1K. We are not going to maintain it because Alexa's rank is disappearing.
 
 * ***Tranco_Dateset*** includes Tranco Top1m(without subdomain) and Tranco Top1m(with subdomain ) downloaded from the official website on 2023-11-18.
 
@@ -15,6 +15,7 @@ This repo aims to conduct a large-scale shared certificate measurement on Tranco
 
 ## Shared Certificate 
 please go to Tranco1K_relate_domain to check our codes and measurement results. 
+
 At last, we identified 99827 related domains. ***63577 / 99827*** domains server certificate on 443 port and ***45930 / 63577*** domains share certificate with Tranco Top 1K. 
 
 
