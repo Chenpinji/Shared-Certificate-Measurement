@@ -23,8 +23,8 @@ cnt = 0
 for domain in tqdm(mill[1000:1010]): 
     url = 'https://api.secrank.cn/dtree/' + domain
     headers = {
-        'fdp-access': 'c37242bfbbc7471cb44372b589721f3d',
-        'fdp-secret': 'oLbrcxL4LUwMeM6EWRYnkT2+eLscjgQuE1nLsElBKiOkvUg3po7XRyW7cTiR406fCxwOhWyvrA2S20HBQVSlhWagFplKWkc1+NSed8Fulso='
+        'fdp-access': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        'fdp-secret': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     }
     params = {
         'limit': 500

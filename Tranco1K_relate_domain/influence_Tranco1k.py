@@ -244,8 +244,8 @@ def pdns(domain):
     originlen = len(domain.split('.'))
     url = 'https://api.secrank.cn/dtree/' + domain
     headers = {
-        'fdp-access': 'c37242bfbbc7471cb44372b589721f3d',
-        'fdp-secret': 'oLbrcxL4LUwMeM6EWRYnkT2+eLscjgQuE1nLsElBKiOkvUg3po7XRyW7cTiR406fCxwOhWyvrA2S20HBQVSlhWagFplKWkc1+NSed8Fulso='
+        'fdp-access': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        'fdp-secret': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     }
     params = {
         'limit': 100
